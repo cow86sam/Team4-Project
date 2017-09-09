@@ -22,10 +22,12 @@ class Class5ViewController: UIViewController,UICollectionViewDataSource,UICollec
         myCell.titleLabel.text = class5Str[indexPath.row]
         
         return cell
-    }
-
+    } 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        class5Str = Data.getInstance().getSubjectMessagesTitle(index: 4)
 
         // Do any additional setup after loading the view.
     }

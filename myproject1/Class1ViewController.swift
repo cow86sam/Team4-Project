@@ -10,7 +10,6 @@ import UIKit
 
 class Class1ViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate {
     var iteams:[String] = ["課程異動",]
-    
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return iteams.count
@@ -24,12 +23,11 @@ class Class1ViewController: UIViewController,UICollectionViewDataSource,UICollec
         mycell.titleLabel.text = iteams[indexPath.row]
         return cell
     }
-    
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+
+        iteams = Data.getInstance().getSubjectMessagesTitle(index: 0)
         // Do any additional setup after loading the view.
     }
 

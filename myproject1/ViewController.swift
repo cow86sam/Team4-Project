@@ -40,6 +40,9 @@ class ViewController: UIViewController {
         
         super.viewDidLoad()
         
+        Data.getInstance().getSubjectsName()
+        Data.getInstance().getSubjectMessagesTitle(index: 0)
+
 //        self.navigationController?.hidesBottomBarWhenPushed = true
       //  self.tabBarController?.hidesBottomBarWhenPushed = true
         
@@ -50,8 +53,8 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    
+    }
+
 
 }
 
-}

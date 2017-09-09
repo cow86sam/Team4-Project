@@ -25,10 +25,12 @@ class Class4ViewController: UIViewController,UICollectionViewDataSource,UICollec
         myCell.titleLabel.text = class4Str[indexPath.row]
         
         return cell
-    }
+    } 
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        class4Str = Data.getInstance().getSubjectMessagesTitle(index: 3)
 
         // Do any additional setup after loading the view.
     }

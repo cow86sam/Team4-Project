@@ -9,7 +9,7 @@
 import UIKit
 
 class Class2ViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate {
-    var items:[String] = ["停課通知"]
+    var items:[String] = ["停課通知"] 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
           return items.count
     }
@@ -23,16 +23,11 @@ class Class2ViewController: UIViewController,UICollectionViewDataSource,UICollec
         return cell
     }
     
-    
-
-    
-    
-    
-
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        items = Data.getInstance().getSubjectMessagesTitle(index: 1)
 
         // Do any additional setup after loading the view.
     }

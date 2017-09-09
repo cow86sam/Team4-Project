@@ -23,13 +23,11 @@ class Class6ViewController: UIViewController,UICollectionViewDelegate,UICollecti
         
         return cell
     }
-    
-    
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        class6Str = Data.getInstance().getSubjectMessagesTitle(index: 5)
         // Do any additional setup after loading the view.
     }
 
