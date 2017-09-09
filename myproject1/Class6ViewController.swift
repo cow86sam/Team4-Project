@@ -8,7 +8,24 @@
 
 import UIKit
 
-class Class6ViewController: UIViewController {
+class Class6ViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
+    var class6Str:[String] = ["ＵＩ加油好嗎"]
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return class6Str.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell:UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "錄像文化與批評", for: indexPath)
+        let myCell:Class06CollectionViewCell = cell as! Class06CollectionViewCell
+        
+        myCell.titleLabel.text = class6Str[indexPath.row]
+        
+        return cell
+    }
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

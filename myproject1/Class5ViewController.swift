@@ -8,7 +8,21 @@
 
 import UIKit
 
-class Class5ViewController: UIViewController {
+class Class5ViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate {
+    var class5Str:[String] = ["想不到拉"]
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return class5Str.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell:UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "中醫概論", for: indexPath)
+        let myCell:Class05CollectionViewCell = cell as! Class05CollectionViewCell
+        
+        myCell.titleLabel.text = class5Str[indexPath.row]
+        
+        return cell
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -10,4 +10,5 @@ import UIKit
 
 class Class06CollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var titleLabel: UILabel!
 }

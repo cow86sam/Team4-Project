@@ -9,7 +9,7 @@
 import UIKit
 
 class Class1ViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate {
-    var iteams:[String] = ["hello","goodbye","232","321312","23131"]
+    var iteams:[String] = ["課程異動",]
     
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

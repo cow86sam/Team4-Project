@@ -9,7 +9,7 @@
 import UIKit
 
 class Class2ViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate {
-    var items:[String] = ["1","2","3","4","5","6","7","8"]
+    var items:[String] = ["停課通知"]
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
           return items.count
     }
