@@ -46,7 +46,7 @@ class Class1ViewController: UIViewController,UICollectionViewDataSource,UICollec
         }else if kind == 4 {
             color = black!
         }else   {
-            color = yellow!
+            color = red!
         }
         
         

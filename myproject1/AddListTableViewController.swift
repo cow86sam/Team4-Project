@@ -9,6 +9,25 @@
 import UIKit
 
 class AddListTableViewController: UITableViewController {
+//    var mystring:[String] = ["123","3455","121"]
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return mystring.count
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cellID = "myCell"
+//        let cell:MyViewCell = tableView.dequeueReusableCell(withIdentifier: cellID, for:indexPath) as! MyViewCell
+    
+        //        let myCell:MyViewCell = cell as! MyViewCell
+        
+//        cell.cellLabel.text = mystring[indexPath.row]
+        //        if cell == nil {
+        //            cell = UITableViewCell(style: .default, reuseIdentifier: cellID)
+        //        }
+        //        cell?.textLabel?.text = cars[indexPath.row]
+        //        cell?.detailTextLabel?.text = "xxxxx"
+//        return cell
+//    }
 
     @IBAction func addListDone(_ sender: Any) {
     }
