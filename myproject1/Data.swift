@@ -34,6 +34,9 @@ class Data {
         createDefaultData()
     }
     
+    var subjectNow:Int = 0
+    var messageNow:Int = 0
+    
     func createDefaultData() {
         var subject:Subject
         var message:Message
@@ -42,6 +45,9 @@ class Data {
         addSubject(sub: subject)
         message = Message(title: "作業")
         message.setData(data: "交三張草圖+上禮拜作品完成\n帶來檢討到晚上9點。")
+        subject.addMessage(msg: message)
+        message = Message(title: "報告")
+        message.setData(data: "報告自己衣櫃裡的衣物。")
         subject.addMessage(msg: message)
         subject.getMessagesTitle()
         
@@ -132,6 +138,25 @@ class Data {
     
     func getSubjects() -> ([Subject]) {
         return subjects
+    }
+    
+    func getSubject(index:Int) -> (Subject) {
+        return subjects[index]
+    }
+    
+    func getMessage(subIndex:Int, msgIndex:Int) -> (Message) {
+        return subjects[subIndex].getMessage(index: msgIndex)
+    }
+    
+    func addMessage(subIndex:Int, msg:Message) {
+        let sub:Subject = subjects[subIndex]
+        sub.addMessage(msg: msg)
+    }
+    
+    func removeMessage(subIndex:Int, msgIndex:Int) {
+        let sub:Subject = subjects[subIndex]
+        print("removeMessage=\(sub.name)")
+        sub.removeMessage(index:msgIndex)
     }
     
 }

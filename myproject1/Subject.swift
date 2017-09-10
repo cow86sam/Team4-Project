@@ -24,8 +24,16 @@ class Subject {
         self.datas.append(msg)
     }
     
-    func removeMessage(num:Int) {
-        self.datas.remove(at: num)
+    func removeMessage(index:Int) {
+        if self.datas.count == 0 {
+            return
+        } else {
+            self.datas.remove(at: index)
+        }
+    }
+    
+    func getMessage(index:Int) -> (Message) {
+        return self.datas[index]
     }
     
     func getMessagesTitle() -> ([String]) {

@@ -9,19 +9,37 @@
 import UIKit
 
 class TextView01TexViewController: UIViewController,UITextViewDelegate {
+
     
     @IBOutlet weak var textField: UITextView!
     
     @IBOutlet weak var nameText: UITextView!
     @IBAction func button(_ sender: Any) {
+        addMessage()
+        self.navigationController?.popViewController(animated: true)
+        
+        /*
         if nameText.isHidden == true{
             nameText.isHidden = false
         } else {
             nameText.isHidden = true
-        }
+        }*/
     }
+    
+    func addMessage() {
+        var msg:Message = Message(title: "報告")
+        msg.setData(data: "下禮拜小組上台報告台灣所有的古蹟文化。")
+        Data.getInstance().addMessage(subIndex: 0, msg: msg)
+    }
+    
     @IBAction func deleteData(_ sender: Any) {
+        print("====deleteData=====")
+        var subIndex:Int = Data.getInstance().subjectNow
+        var msgIndex:Int = Data.getInstance().messageNow
+        Data.getInstance().removeMessage(subIndex: subIndex, msgIndex: msgIndex)
+        self.navigationController?.popViewController(animated: true)
     }
+    
     let blue = UIImage(named:"blueView")
     let red = UIImage(named:"redView")
     let orange = UIImage(named:"orangeView")
@@ -29,31 +47,35 @@ class TextView01TexViewController: UIViewController,UITextViewDelegate {
     let black = UIImage(named:"blackView")
     let yellow = UIImage(named:"yelloView")
     
-    var kind = 2
+    var kind = 4
     var color:UIImage?
-    
-    
+//    if kind == 0 {
+//
+//    color = blue!
+//
+//    }else if kind == 1 {
+//    color = red!
+//    }else if kind == 2 {
+//    color = orange!
+//    }else if kind == 3 {
+//    color = green!
+//    }else if kind == 4 {
+//    color = black!
+//    }else   {
+//    color = red!
+//    }
+//    myImage.image = color
     
   
 
     override func viewDidLoad() {
-        if kind == 0 {
-            
-            color = blue!
-            
-        }else if kind == 1 {
-            color = red!
-        }else if kind == 2 {
-            color = orange!
-        }else if kind == 3 {
-            color = green!
-        }else if kind == 4 {
-            color = black!
-        }else   {
-            color = red!
-        }
         super.viewDidLoad()
+        
+        var subIndex:Int = Data.getInstance().subjectNow
+        var msgIndex:Int = Data.getInstance().messageNow
+        var msg:Message = Data.getInstance().getMessage(subIndex: subIndex, msgIndex: msgIndex)
 
+        textField.text = msg.data
         // Do any additional setup after loading the view.
     }
 
