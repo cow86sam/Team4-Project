@@ -100,7 +100,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="學期切換" id="9Ef-Ov-fpK">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="xEF-tp-8F4"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="xEF-tp-8F4">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="egz-wB-8vE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -215,7 +217,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="我的課表" id="4RG-FY-hiX">
-                        <barButtonItem key="rightBarButtonItem" image="btnSemesterchange2" id="pQH-nq-S4p">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="btnSemesterchange2" id="pQH-nq-S4p">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="ucR-Eb-TgW" kind="show" id="PF1-qm-kpM"/>
                             </connections>
@@ -237,7 +240,7 @@
         <!--Title-->
         <scene sceneID="YLZ-oG-Anb">
             <objects>
-                <tableViewController hidesBottomBarWhenPushed="YES" id="uw3-Xp-nhp" sceneMemberID="viewController">
+                <tableViewController hidesBottomBarWhenPushed="YES" id="uw3-Xp-nhp" customClass="AddListTableViewController" customModule="myproject1" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="PP9-rM-a8J">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -259,10 +262,10 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBt-fN-cvj">
-                                                    <rect key="frame" x="321" y="13" width="46" height="30"/>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBt-fN-cvj">
+                                                    <rect key="frame" x="325" y="18" width="61" height="44"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Button"/>
+                                                    <state key="normal" title="Button" image="go"/>
                                                     <connections>
                                                         <segue destination="ccX-VY-lQs" kind="show" id="dnU-Q8-rgq"/>
                                                     </connections>
@@ -434,7 +437,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="372" height="62"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="btnMessage" translatesAutoresizingMaskIntoConstraints="NO" id="hdq-yW-tNQ">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blueMessage" translatesAutoresizingMaskIntoConstraints="NO" id="hdq-yW-tNQ">
                                                     <rect key="frame" x="11" y="0.0" width="346" height="62"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -472,6 +475,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="中階油畫l" id="bff-en-78A">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="0p8-Dz-QbH">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="uw3-Xp-nhp" kind="show" id="l7l-H6-Hzk"/>
                             </connections>
@@ -508,7 +512,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="372" height="62"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="btnMessage" translatesAutoresizingMaskIntoConstraints="NO" id="Ppx-hp-Mlw">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blueMessage" translatesAutoresizingMaskIntoConstraints="NO" id="Ppx-hp-Mlw">
                                                     <rect key="frame" x="10" y="0.0" width="346" height="62"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -544,6 +548,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="視覺經驗" id="C9v-z6-3uU">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Ufr-kS-c17">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="uw3-Xp-nhp" kind="show" id="SbO-2A-5ng"/>
                             </connections>
@@ -963,7 +968,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="372" height="62"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="btnMessage" translatesAutoresizingMaskIntoConstraints="NO" id="88e-S7-XGb">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blueMessage" translatesAutoresizingMaskIntoConstraints="NO" id="88e-S7-XGb">
                                                     <rect key="frame" x="10" y="0.0" width="346" height="62"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -999,6 +1004,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="大學生活學習與輔導" id="uXa-SK-Nae">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Bvz-eD-3q3">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="uw3-Xp-nhp" kind="show" id="90E-B9-LJG"/>
                             </connections>
@@ -1035,7 +1041,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="372" height="62"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="btnMessage" translatesAutoresizingMaskIntoConstraints="NO" id="dCG-24-Fit">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blueMessage" translatesAutoresizingMaskIntoConstraints="NO" id="dCG-24-Fit">
                                                     <rect key="frame" x="10" y="1" width="346" height="62"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
@@ -1071,6 +1077,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="創意設計l" id="C6n-N0-SEa">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="rWu-BL-1nt">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="uw3-Xp-nhp" kind="show" id="ch6-Hj-UkP"/>
                             </connections>
@@ -1107,7 +1114,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="372" height="62"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="btnMessage" translatesAutoresizingMaskIntoConstraints="NO" id="gga-3F-QoD">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blueMessage" translatesAutoresizingMaskIntoConstraints="NO" id="gga-3F-QoD">
                                                     <rect key="frame" x="11" y="0.0" width="346" height="62"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -1143,6 +1150,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="中醫概論" id="7jw-9p-A9F">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ZIM-jw-8iM">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="uw3-Xp-nhp" kind="show" id="5Fo-AH-a3U"/>
                             </connections>
@@ -1179,7 +1187,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="372" height="62"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="btnMessage" translatesAutoresizingMaskIntoConstraints="NO" id="lOs-ht-gsY">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blueMessage" translatesAutoresizingMaskIntoConstraints="NO" id="lOs-ht-gsY">
                                                     <rect key="frame" x="10" y="0.0" width="346" height="62"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -1215,6 +1223,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="錄像文化與批評" id="QMd-8X-Ujp">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="JUD-T0-zHm">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="uw3-Xp-nhp" kind="show" id="egi-UL-gKW"/>
                             </connections>
@@ -1236,6 +1245,9 @@
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.2784313725" green="0.79215686269999996" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1286,8 +1298,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="btnMessage" width="346" height="62"/>
+        <image name="blueMessage" width="346" height="62"/>
         <image name="btnSemesterchange2" width="53" height="16"/>
+        <image name="go" width="54" height="44"/>
         <image name="picClass" width="375" height="553"/>
     </resources>
     <inferredMetricsTieBreakers>

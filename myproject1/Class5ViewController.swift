@@ -18,17 +18,21 @@ class Class5ViewController: UIViewController,UICollectionViewDataSource,UICollec
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell:UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "中醫概論", for: indexPath)
         let myCell:Class05CollectionViewCell = cell as! Class05CollectionViewCell
+        let blue = UIImage(named:"blueMessage")
+        let red = UIImage(named:"redMessage")
+        let orange = UIImage(named:"orangeMessage")
+        let green = UIImage(named:"greenMessage")
+        let black = UIImage(named:"blackMessage")
+        
         
         myCell.titleLabel.text = class5Str[indexPath.row]
         
         return cell
-    } 
-    
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        class5Str = Data.getInstance().getSubjectMessagesTitle(index: 4)
-
+ class5Str = Data.getInstance().getSubjectMessagesTitle(index: 4) 
         // Do any additional setup after loading the view.
     }
 

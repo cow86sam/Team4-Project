@@ -21,17 +21,21 @@ class Class4ViewController: UIViewController,UICollectionViewDataSource,UICollec
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell:UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "創意設計l", for: indexPath)
         let myCell:Class04CollectionViewCell = cell as! Class04CollectionViewCell
+        let blue = UIImage(named:"blueMessage")
+        let red = UIImage(named:"redMessage")
+        let orange = UIImage(named:"orangeMessage")
+        let green = UIImage(named:"greenMessage")
+        let black = UIImage(named:"blackMessage")
+        
         
         myCell.titleLabel.text = class4Str[indexPath.row]
         
         return cell
-    } 
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        class4Str = Data.getInstance().getSubjectMessagesTitle(index: 3)
-
+ class4Str = Data.getInstance().getSubjectMessagesTitle(index: 3) 
         // Do any additional setup after loading the view.
     }
 

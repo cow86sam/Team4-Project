@@ -9,7 +9,9 @@
 import UIKit
 
 class Class1ViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate {
+
     var iteams:[String] = ["課程異動",]
+    
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return iteams.count
@@ -20,14 +22,47 @@ class Class1ViewController: UIViewController,UICollectionViewDataSource,UICollec
         
         let mycell:Class01CollectionViewCell = cell as! Class01CollectionViewCell
         
+        let blue = UIImage(named:"blueMessage")
+        let red = UIImage(named:"redMessage")
+        let orange = UIImage(named:"orangeMessage")
+        let green = UIImage(named:"greenMessage")
+        let black = UIImage(named:"blackMessage")
+        let yellow = UIImage(named:"yelloMessage")
+        
+        var kind = 7
+        var color:UIImage?
+        
+        
+        
+        if kind == 0 {
+            color = blue!
+            
+        }else if kind == 1 {
+            color = red!
+        }else if kind == 2 {
+            color = orange!
+        }else if kind == 3 {
+            color = green!
+        }else if kind == 4 {
+            color = black!
+        }else   {
+            color = yellow!
+        }
+        
+        
+        mycell.myImage.image = color
+        
         mycell.titleLabel.text = iteams[indexPath.row]
+        
+        
         return cell
     }
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        iteams = Data.getInstance().getSubjectMessagesTitle(index: 0)
+       iteams = Data.getInstance().getSubjectMessagesTitle(index: 0)
         // Do any additional setup after loading the view.
     }
 
@@ -46,5 +81,6 @@ class Class1ViewController: UIViewController,UICollectionViewDataSource,UICollec
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    
 }

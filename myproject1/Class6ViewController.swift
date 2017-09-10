@@ -18,16 +18,24 @@ class Class6ViewController: UIViewController,UICollectionViewDelegate,UICollecti
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell:UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "錄像文化與批評", for: indexPath)
         let myCell:Class06CollectionViewCell = cell as! Class06CollectionViewCell
+        let blue = UIImage(named:"blueMessage")
+        let red = UIImage(named:"redMessage")
+        let orange = UIImage(named:"orangeMessage")
+        let green = UIImage(named:"greenMessage")
+        let black = UIImage(named:"blackMessage")
+        
         
         myCell.titleLabel.text = class6Str[indexPath.row]
         
         return cell
     }
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        class6Str = Data.getInstance().getSubjectMessagesTitle(index: 5)
+ class6Str = Data.getInstance().getSubjectMessagesTitle(index: 5) 
         // Do any additional setup after loading the view.
     }
 

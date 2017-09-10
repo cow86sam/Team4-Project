@@ -10,12 +10,29 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    
     @IBOutlet weak var class07Button: UIButton!
     @IBOutlet weak var class08Button: UIButton!
     @IBOutlet weak var class09Button: UIButton!
     @IBOutlet weak var class10Button: UIButton!
     @IBOutlet weak var class12Button: UIButton!
     @IBOutlet weak var class11Button: UIButton!
+    
+//    var firstSememster = true
+//    func setSememster(){
+//        if firstSememster == false {
+//            class07Button.isHidden == false
+//            class08Button.isHidden == false
+//            class09Button.isHidden == false
+//            class10Button.isHidden == false
+//            class11Button.isHidden == false
+//            class12Button.isHidden == false
+//        }
+//        return
+//
+//    }
+    
+    
    
     
     override func viewDidLoad() {
@@ -39,10 +56,8 @@ class ViewController: UIViewController {
         }
         
         super.viewDidLoad()
-        
         Data.getInstance().getSubjectsName()
-        Data.getInstance().getSubjectMessagesTitle(index: 0)
-
+        Data.getInstance().getSubjectMessagesTitle(index: 0) 
 //        self.navigationController?.hidesBottomBarWhenPushed = true
       //  self.tabBarController?.hidesBottomBarWhenPushed = true
         
@@ -53,8 +68,8 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-
+    
 
 }
 
+}
